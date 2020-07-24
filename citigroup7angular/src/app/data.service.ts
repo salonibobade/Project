@@ -46,7 +46,9 @@ export class DataService {
    public loginUser(user)
    {      
      console.log()
-    return this.http.get(this.userUrl+"/loggedin?user='123'") ;
+     var a=user.userName;
+     var b=user.passWord;
+    return this.http.get(this.userUrl+"/loggedin?user="+a+"&password="+b) ;
   }
   
   getUsername() {
